@@ -1,11 +1,21 @@
-# React + Vite
+# Sarthak Sharma - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design**: Works perfectly on desktop, tablet, and mobile
+- **Project Showcase**: Interactive slider to display projects
+- **Teaching Section**: Dedicated page for YouTube channel and educational content
+- **CV Download**: Direct download functionality for resume
+- **Modern UI**: Clean design with smooth animations and transitions
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React 19, Vite
+- **Styling**: Tailwind CSS 4
+- **Routing**: React Router DOM
+- **Icons**: Heroicons (via SVG)
 
 ## React Compiler
 
