@@ -31,29 +31,29 @@ const Teaching = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-[#1565C0] to-[#0d47a1] text-white py-20">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+      <div className="bg-gradient-to-r from-[#1565C0] to-[#0d47a1] text-white py-12 sm:py-16 lg:py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 lg:mb-6">
             Teaching & Learning
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Sharing knowledge through my YouTube channel where I teach maths,DSA any many more.
+          <p className="text-lg sm:text-xl lg:text-2xl mb-6 lg:mb-8 max-w-4xl mx-auto">
+            Sharing knowledge through my YouTube channel where I teach maths, DSA and many more.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="https://youtube.com/@classesbysarthak"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center"
+              className="bg-red-600 hover:bg-red-700 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center text-sm sm:text-base"
             >
-              <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
               </svg>
               Subscribe to My Channel
             </a>
             <div className="text-center">
-              {/* <div className="text-2xl font-bold">10K+</div> */}
-              {/* <div className="text-sm opacity-90">Subscribers</div> */}
+              <div className="text-xl sm:text-2xl font-bold">10K+</div>
+              <div className="text-sm opacity-90">Subscribers</div>
             </div>
           </div>
         </div>

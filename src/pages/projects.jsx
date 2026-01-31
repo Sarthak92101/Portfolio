@@ -51,9 +51,9 @@ const Projects = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4">
+    <div className="min-h-screen bg-gray-50 py-8 lg:py-12 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-black mb-12">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-black mb-8 lg:mb-12">
           My Projects
         </h1>
 
@@ -66,9 +66,9 @@ const Projects = () => {
             >
               {projects.map((project) => (
                 <div key={project.id} className="w-full flex-shrink-0">
-                  <div className="flex flex-col md:flex-row h-[600px]">
+                  <div className="flex flex-col lg:flex-row h-auto lg:h-[600px]">
                     {/* Image Section */}
-                    <div className="w-full md:w-1/2 relative">
+                    <div className="w-full lg:w-1/2 relative h-48 sm:h-64 lg:h-full">
                       <img
                         src={project.image}
                         alt={project.title}
@@ -81,22 +81,22 @@ const Projects = () => {
                     </div>
 
                     {/* Content Section */}
-                    <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-                      <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+                    <div className="w-full lg:w-1/2 p-4 sm:p-6 lg:p-8 xl:p-12 flex flex-col justify-center">
+                      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black mb-3 lg:mb-4">
                         {project.title}
                       </h2>
-                      <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+                      <p className="text-gray-600 text-sm sm:text-base lg:text-lg mb-4 lg:mb-8 leading-relaxed">
                         {project.description}
                       </p>
 
                       {/* Technologies */}
-                      <div className="mb-8">
-                        <h3 className="text-lg font-semibold text-black mb-3">Technologies Used:</h3>
+                      <div className="mb-6 lg:mb-8">
+                        <h3 className="text-base lg:text-lg font-semibold text-black mb-3">Technologies Used:</h3>
                         <div className="flex flex-wrap gap-2">
                           {project.technologies.map((tech, index) => (
                             <span
                               key={index}
-                              className="bg-[#1565C0] text-white px-3 py-1 rounded-full text-sm font-medium"
+                              className="bg-[#1565C0] text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium"
                             >
                               {tech}
                             </span>
@@ -105,9 +105,14 @@ const Projects = () => {
                       </div>
 
                       {/* View Project Button */}
-                      <button className="bg-[#1565C0] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#0d47a1] transition-colors duration-300 self-start">
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-[#1565C0] text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-[#0d47a1] transition-colors duration-300 self-start text-sm sm:text-base"
+                      >
                         View Project
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -118,29 +123,29 @@ const Projects = () => {
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-90 hover:bg-opacity-100 text-black p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+            className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-90 hover:bg-opacity-100 text-black p-2 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
 
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-90 hover:bg-opacity-100 text-black p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+            className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-90 hover:bg-opacity-100 text-black p-2 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
 
           {/* Dots Indicator */}
-          <div className="flex justify-center mt-8 space-x-2">
+          <div className="flex justify-center mt-6 lg:mt-8 space-x-2">
             {projects.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
                   index === currentSlide
                     ? 'bg-[#1565C0] scale-125'
                     : 'bg-gray-300 hover:bg-gray-400'
