@@ -1,20 +1,21 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
 const HeroTop = () => {
-  const navigate = useNavigate();
-
   const handleDownloadCV = () => {
-    // Create a temporary anchor element
     const link = document.createElement('a');
-    link.href = '/images/Resume.png'; // Path to your CV file in public folder
-    link.download = 'Sarthak_Sharma_CV.png'; // Name for the downloaded file
-    link.target = '_blank'; // Open in new tab as fallback
-
-    // Append to body, click, and remove
+    link.href = '/images/Resume.png';
+    link.download = 'Sarthak_Sharma_CV.png';
+    link.target = '_blank';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+  };
+
+  const handleViewProjects = () => {
+    const element = document.getElementById('projects-section');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -44,7 +45,7 @@ const HeroTop = () => {
 
             <button
               className="w-full sm:w-auto bg-[#F2F2F2] text-black px-6 py-3 rounded-lg font-medium hover:bg-[#e0e0e0] transition-colors duration-300 shadow-lg hover:shadow-xl"
-              onClick={() => navigate("/projects")}
+              onClick={handleViewProjects}
             >
               View Projects
             </button>

@@ -46,6 +46,7 @@ const Projects = () => {
     setCurrentSlide((prev) => (prev - 1 + projects.length) % projects.length)
   }
 
+
   const goToSlide = (index) => {
     setCurrentSlide(index)
   }

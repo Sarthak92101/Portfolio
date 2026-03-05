@@ -32,7 +32,7 @@ const Navbar = () => {
             <Link to="/about-us" className="hover:text-[#1565C0] hover:scale-105 transition-all duration-200">
               Skills
             </Link>
-            <Link to="/projects" className="hover:text-[#1565C0] hover:scale-105 transition-all duration-200">
+            <Link to="#" className="hover:text-[#1565C0] hover:scale-105 transition-all duration-200">
               Projects
             </Link>
             <Link to="/teaching" className="hover:text-[#1565C0] hover:scale-105 transition-all duration-200">
