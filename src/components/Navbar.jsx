@@ -38,6 +38,9 @@ const Navbar = () => {
             <Link to="/teaching" className="hover:text-[#1565C0] hover:scale-105 transition-all duration-200">
               Teaching
             </Link>
+            <Link to="/connect" className="hover:text-[#1565C0] hover:scale-105 transition-all duration-200">
+              Connect
+            </Link>
             <Link to="/cv" className="hover:text-[#1565C0] hover:scale-105 transition-all duration-200">
               CV
             </Link>
@@ -87,6 +90,13 @@ const Navbar = () => {
                 onClick={closeMenu}
               >
                 Teaching
+              </Link>
+              <Link
+                to="/connect"
+                className="px-6 py-3 text-[#111] hover:bg-[#1565C0] hover:text-white transition-colors duration-200"
+                onClick={closeMenu}
+              >
+                Connect
               </Link>
               <Link
                 to="/cv"

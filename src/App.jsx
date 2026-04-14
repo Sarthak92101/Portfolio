@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Teaching from "./pages/Teaching";
+import Connect from "./pages/Connect";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<Home />} />
         <Route path="/teaching" element={<Teaching />} />
+        <Route path="/connect" element={<Connect />} />
       </Routes>
 
       <Footer/>
